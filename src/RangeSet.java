@@ -23,7 +23,6 @@ public class RangeSet implements Set<Integer> {
     }
 
     @Override
-
     public boolean contains(Object o) {
         ArrayList<Integer> integerList = new ArrayList<>(integerSet);
         ArrayList<Integer> rangeList = new ArrayList<>(rangeSet);

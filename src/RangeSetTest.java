@@ -29,4 +29,13 @@ public class RangeSetTest {
         }*/
     }
 
+    @Test
+    public void checkOverlappingRanges() {
+        RangeSet set = new RangeSet();
+        set.addRange(1, 10);
+        set.addRange(5, 100);
+
+        assertTrue(set.contains(6));
+    }
+
 }
