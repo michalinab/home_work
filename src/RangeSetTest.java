@@ -24,7 +24,8 @@ public class RangeSetTest {
         assertFalse(set.contains(1_500_000));
 
 
-       /* for (Integer value : set) {
+
+        /*for (Integer value : set) {
             assertTrue(set.contains(value));
         }*/
     }
