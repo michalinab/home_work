@@ -13,7 +13,7 @@ public class RangeSetTest {
         set.addRange(10, 100_000);
         set.addRange(1_000_000, 2_000_000);
         set.remove(1_500_000);
-   
+
 
         assertTrue(set.contains(10));
         assertTrue(set.contains(500));
