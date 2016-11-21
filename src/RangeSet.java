@@ -18,28 +18,6 @@ public class RangeSet implements Set<Integer> {
             if (rangeSet.contains(from) || rangeSet.contains(to)) {
 
 
-                this.rangeSet = new HashSet<>(rangeList.size());
-
-                for (int i = 0; i < rangeList.size() - 1; i = i + 2) {
-                    int current = rangeList.get(i);
-                    int next = rangeList.get(i + 1);
-
-                    if (!(current <= from & from <= next)) {
-
-                        current = from;
-
-                        if (!(current <= from & from <= next)) {
-
-                            next = to;
-                        }
-
-
-                    }
-                    for (int j = 0; j < rangeList.size(); j++) {
-                        rangeSet.add(rangeList.get(j));
-                    }
-
-                }
             } else {
                 rangeSet.add(from);
                 rangeSet.add(to);

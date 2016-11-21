@@ -11,23 +11,22 @@ public class RangeSetTest {
 
         set.add(2);
         set.addRange(10, 100_000);
+        set.addRange(10, 110_000);
         set.addRange(1_000_000, 2_000_000);
         set.remove(1_500_000);
 
 
         assertTrue(set.contains(10));
+        assertTrue(set.contains(110_000));
         assertTrue(set.contains(500));
         assertTrue(set.contains(99_000));
         assertTrue(set.contains(1_500_001));
         assertTrue(set.contains(2));
 
         assertFalse(set.contains(3));
-    assertFalse(set.contains(1_500_000));
+        assertFalse(set.contains(1_500_000));
 
 
-        /*for (Integer value : set) {
-            assertTrue(set.contains(value));
-        }*/
     }
 
     @Test
@@ -36,7 +35,7 @@ public class RangeSetTest {
         set.addRange(1, 10);
         set.addRange(5, 100);
 
-      assertTrue(set.contains(6));
+        assertTrue(set.contains(6));
     }
 
 }
